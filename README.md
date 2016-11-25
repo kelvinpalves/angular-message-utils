@@ -47,7 +47,7 @@ O atributo "data" deverá ser criado pelo Back-End.
 
 ### Exemplo
 
-![Exemplo](https://github.com/kelvinpalves/angular-message-utils/tree/master/src/img/exemplo.png)
+![Exemplo](http://github.com/kelvinpalves/angular-message-utils/tree/master/src/img/exemplo.png)
 
 ### Créditos e Dependências
 
