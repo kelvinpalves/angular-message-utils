@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="app" ng-strict-di>
 <head>
 	<title>Angular Message Utils + Toastr</title>
 	<meta charset="utf-8">
@@ -8,16 +8,20 @@
 </head>
 <body>
 	<div class="row" style="padding: 15px;">
-		<div class="col-md-12">
-			<button class="btn btn-primary">Exemplo Mensagem de Informação</button>
-			<button class="btn btn-danger">Exemplo Mensagem de Erro</button>
-			<button class="btn btn-warning">Exemplo Mensagem de Alerta</button>
-			<button class="btn btn-success">Exemplo Mensagem de Sucesso</button>
-			<button class="btn btn-default">Exemplo com Todas as Mensagens</button>	
+		<div class="col-md-12" ng-controller="Exemplo as vm">
+			<button class="btn btn-primary" ng-click="vm.msgInfo()">Informação</button>
+			<button class="btn btn-danger" ng-click="vm.msgError()">Erro</button>
+			<button class="btn btn-warning" ng-click="vm.msgWarn()">Alerta</button>
+			<button class="btn btn-success" ng-click="vm.msgSuccess()">Sucesso</button>
+			<button class="btn btn-default" ng-click="vm.todas()">Diversas</button>	
+			<button class="btn btn-default" ng-click="vm.vazio()">Retorno Vazio</button>	
+			<button class="btn btn-danger" ng-click="vm.semMensagem(false)">Sem Mensagens Erro</button>	
+			<button class="btn btn-success" ng-click="vm.semMensagem(true)">Sem Mensagens Sucesso</button>	
 		</div>
 	</div>
 	<div class="row" style="padding: 15px;">
 		<div class="col-md-12">
+			<strong>Retorno $http:</strong>
 			<pre>
 				 {
 				 	"data": {
@@ -51,7 +55,21 @@
 		</div>	
 	</div>
 
+	<!-- vendor -->
 	<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="bower_components/toastr/toastr.min.js"></script>
+	<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+	<!-- utils -->
+	<script type="text/javascript" src="src/app/app.module.js"></script>
+	<script type="text/javascript" src="src/app/core/core.module.js"></script>
+	<script type="text/javascript" src="src/app/core/core.constants.js"></script>
+	<script type="text/javascript" src="src/app/core/utils/utils.module.js"></script>
+	<script type="text/javascript" src="src/app/core/utils/message.constants.js"></script>
+	<script type="text/javascript" src="src/app/core/utils/message.factory.js"></script>
+
+	<!-- exemplo -->
+	<script type="text/javascript" src="src/app/exemplo/exemplo.module.js"></script>
+	<script type="text/javascript" src="src/app/exemplo/exemplo.js"></script>
 </body>
 </html>
