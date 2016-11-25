@@ -46,6 +46,7 @@
 
 		function initToastr() {
 			toastr.options.timeOut = 3000;
+			toastr.options.progressBar = true;
 			toastr.options.closeButton = true;
 	        toastr.options.positionClass = 'toast-bottom-right';
 	        toastr.options.preventDuplicates = true;
