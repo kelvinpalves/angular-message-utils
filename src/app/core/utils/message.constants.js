@@ -17,5 +17,6 @@
 	angular
 		.module('core.utils')
 		.constant('DefaultMessage', defaultMessage)
-		.constant('MessageType', messageType)
+		.constant('MessageType', messageType);
+		
 })();

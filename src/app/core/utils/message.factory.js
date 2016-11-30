@@ -5,7 +5,7 @@
 		.module('core.utils')
 		.factory('messageUtils', messageUtils);
 
-	messageUtils.$inject = ['DefaultMessage', 'MessageType', 'toastr']
+	messageUtils.$inject = ['DefaultMessage', 'MessageType', 'toastr'];
 
 	function messageUtils(DefaultMessage, MessageType, toastr) {
 		var service = {
